@@ -32,4 +32,4 @@ spec:
           emptyDir: {}
 
 
-kubectl exec -it -n homeworking postgres-deployment-7dd7dbf6d-gfzj9 -- psql -h localhost -U ps_user --password -p 5432 ps_db
+#kubectl exec -it -n homeworking postgres-deployment-7dd7dbf6d-gfzj9 -- psql -h localhost -U ps_user --password -p 5432 ps_db
