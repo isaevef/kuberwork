@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-secret
+  labels:
+    name: postrgres-server
+  namespace: homeworking
+data:
+  POSTGRES_DB: |-
+   ps_db
+  POSTGRES_USER: |-
+   ps_user
+  POSTGRES_PASSWORD: |-
+   123
+ 
