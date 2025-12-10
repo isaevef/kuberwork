@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-secret
+  labels:
+    name: frontend
+  namespace: homeworking
+data:
+  POSTGRES_PASSWORD: |-
+   123
+  PYCWA_DB_HOST: |-
+   postgres-service
+  PYCWA_DATABASE: |-
+   ps_db
+  PYCWA_USER: |-
+   ps_user
+  PYCWA_PASSWORD: |-
+   123
+ 
+  
+ 

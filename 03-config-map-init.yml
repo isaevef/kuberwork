@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-init-script
+  labels:
+    name: postrgres-server
+  namespace: homeworking
+data:
+   init.sql: |
+    CREATE SEQUENCE data_item_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1;
+    CREATE TABLE public.data (
+     item_id integer DEFAULT nextval('data_item_id_seq') NOT NULL,
+     item_first_name text,
+     item_last_name text,
+     item_number text NOT NULL,
+     CONSTRAINT data_pkey PRIMARY KEY (item_id)
+    ) WITHOUT OIDS;
+    CREATE INDEX index_first_name ON data (item_first_name);
+    CREATE INDEX index_last_name ON data (item_last_name);
+    CREATE INDEX index_number ON data (item_number);
+ 

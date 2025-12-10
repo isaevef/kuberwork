@@ -27,9 +27,13 @@ spec:
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data
+            - name: init-scripts-volume
+              mountPath: /docker-entrypoint-initdb.d
       volumes:
         - name: postgres-storage
           emptyDir: {}
-
+        - name: init-scripts-volume
+          configMap:
+            name: postgres-init-script
 
 #kubectl exec -it -n homeworking postgres-deployment-7dd7dbf6d-gfzj9 -- psql -h localhost -U ps_user --password -p 5432 ps_db
