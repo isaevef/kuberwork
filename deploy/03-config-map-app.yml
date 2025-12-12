@@ -9,7 +9,7 @@ data:
   POSTGRES_PASSWORD: |-
    123
   PYCWA_DB_HOST: |-
-   postgres-service.homeworking.svc.cluster.local // можно просто - postgres-service
+   postgres-service.homeworking.svc.cluster.local 
   PYCWA_DATABASE: |-
    ps_db
   PYCWA_USER: |-
